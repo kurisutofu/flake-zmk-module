@@ -3,21 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        bt_sel_3 {
-            bindings = <&bt3>;
-            key-positions = <42 30>;
-            layers = <2>;
-        };
-
-        bt_sel_4 {
-            bindings = <&bt4>;
-            key-positions = <30 18>;
-            layers = <2>;
-        };
-    };
 
     macros {
         bt_clr_0: bt_clr_0 {
@@ -143,11 +128,11 @@
 
         fn {
             bindings = <
-&trans          &kp F1          &kp F2  &kp F3      &kp F4  &kp F5                          &kp F6  &kp F7          &kp F8      &kp F9          &kp F10         &kp F11
-&bt BT_SEL 0    &bt BT_SEL 2    &none   &none       &none   &soft_off                       &none   &out OUT_USB    &none       &out OUT_TOG    &none           &kp F12
-&bt BT_SEL 1    &bt BT_SEL 3    &none   &none       &none   &none                           &none   &none           &none       &none           &none           &none
-&trans          &none           &none   &bt BT_CLR  &none   &out OUT_BLE                    &none   &kp LEFT        &kp UP      &kp RIGHT       &studio_unlock  &trans
-                                &trans  &trans      &trans  &trans          &none   &none   &trans  &kp HOME        &kp DOWN    &kp END
+&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                          &kp F6  &kp F7          &kp F8      &kp F9          &kp F10         &kp F11
+&bt0    &bt2    &none   &none   &none   &soft_off                       &none   &out OUT_USB    &none       &out OUT_TOG    &none           &kp F12
+&bt1    &bt3    &none   &none   &none   &none                           &none   &none           &none       &none           &none           &none
+&trans  &none   &none   &none   &none   &out OUT_BLE                    &none   &kp LEFT        &kp UP      &kp RIGHT       &studio_unlock  &trans
+                &trans  &trans  &trans  &trans          &none   &none   &trans  &kp HOME        &kp DOWN    &kp END
             >;
         };
     };
