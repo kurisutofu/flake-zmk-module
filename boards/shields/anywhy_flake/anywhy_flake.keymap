@@ -94,7 +94,7 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        taskman: taskman {
+        taskman: task_manager {
             compatible = "zmk,behavior-mod-morph";
             label = "TASKMAN";
             bindings = <&kp ESC>, <&kp LS(LC(ESC))>;
@@ -125,9 +125,9 @@
 &taskman    &kp N1  &kp N2      &kp N3    &kp N4    &kp N5                              &kp N6          &kp N7  &kp N8      &kp N9    &kp N0    &kp DEL
 &kp TAB     &kp Q   &kp W       &kp E     &kp R     &kp T                               &kp Y           &kp U   &kp I       &kp O     &kp P     &kp MINUS
 &none       &kp A   &kp S       &kp D     &kp F     &kp G                               &kp H           &kp J   &kp K       &kp L     &kp SEMI  &kp APOS
-&kp LCTRL   &kp Z   &kp X       &kp C     &kp V     &kp B                               &kp N           &kp M   &kp COMMA   &kp DOT   &kp FSLH  &MO_TOG(FUNC)
+&kp LCTRL   &kp Z   &kp X       &kp C     &kp V     &kp B                               &kp N           &kp M   &kp COMMA   &kp DOT   &kp FSLH  MO_TOG(FUNC)
     &mo NUMNAV  &kp LGUI  &kp LALT  &mt LSHIFT SPACE        &kp BSPC          &kp RET       &mt LSHIFT BSLH &none   &kp LBKT    &kp RBKT
-    &MO_TOG(NUMNAV)  &kp LGUI  &kp LALT  &mt LSHIFT SPACE        &kp BSPC          &kp RET       &kp BSLH  &none  &kp LBKT  &kp RBKT
+    MO_TOG(NUMNAV)  &kp LGUI  &kp LALT  &mt LSHIFT SPACE        &kp BSPC          &kp RET       &kp BSLH  &none  &kp LBKT  &kp RBKT
             >;
         };
 
