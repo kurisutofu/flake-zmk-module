@@ -39,7 +39,7 @@
         };
 
         prttog: print_and_tog{
-            compatible = "zmk,behavior-macro";
+            compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp N9>, <&macro_param_1to1>, <&tog MACRO_PLACEHOLDER>;
         };
