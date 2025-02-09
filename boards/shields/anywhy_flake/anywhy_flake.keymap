@@ -102,51 +102,51 @@
 
         qwerty {
             bindings = <
-&taskman    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                  &kp N6  &kp N7  &kp N8      &kp N9  &kp N0      &kp DEL
-&kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                                   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp MINUS
-&kp LGUI    &kp A   &kp S   &kp D   &kp F   &kp G                                   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp APOS
-&kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    MO_TOG(SPEC1)
-    &none  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE  &kp BSPC       &kp RET  &mt LSHIFT BSLH  &none  &kp LBKT  &kp RBKT
+                &taskman    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                  &kp N6  &kp N7  &kp N8      &kp N9  &kp N0      &kp DEL
+                &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                                   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp MINUS
+                &kp LGUI    &kp A   &kp S   &kp D   &kp F   &kp G                                   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp APOS
+                &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    MO_TOG(SPEC1)
+                    &none  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE  &kp BSPC       &kp RET  &mt LSHIFT BSLH  &none  &kp LBKT  &kp RBKT
             >;
         };
 
         engram {
             bindings = <
-&taskman    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                              &kp N6      &kp N7  &kp N8  &kp N9  &kp N0  &kp DEL
-&kp TAB     &kp B   &kp Y   &kp O   &kp U   &kp SQT                                             &kp DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
-&kp LGUI    &kp C   &kp I   &kp E   &kp A   &kp COMMA                                           &kp DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
-&kp LCTRL   &kp G   &kp X   &kp J   &kp K   &kp MINUS                                           &kp QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(FUNC)
-    &none  MO_TOG(SPEC_NUM)  &kp LALT  &lt ENGRAM_RAISED SPACE &kp BSPC         &kp RET  &mo ENGRAM_RAISED AT  &kp KP_SLASH  &kp LBKT  &kp RBKT
+                &taskman    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                              &kp N6      &kp N7  &kp N8  &kp N9  &kp N0  &kp DEL
+                &kp TAB     &kp B   &kp Y   &kp O   &kp U   &kp SQT                                             &kp DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
+                &kp LGUI    &kp C   &kp I   &kp E   &kp A   &kp COMMA                                           &kp DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
+                &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &kp MINUS                                           &kp QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(SPEC1)
+                    &none  MO_TOG(SPEC_NUM)  &kp LALT  &lt ENGRAM_RAISED SPACE &kp BSPC         &kp RET  &mo ENGRAM_RAISED AT  &kp KP_SLASH  &kp LBKT  &kp RBKT
             >;
         };
 
         engram_raised {
             bindings = <
-&trans  &kp PIPE    &kp EQ      &kp TILDE    &kp PLUS   &kp LT                              &kp GT      &kp CARET    &kp AMPS   &kp PERC    &kp ASTER    &trans
-&trans  &kp LS(B)   &kp LS(Y)   &kp LS(O)    &kp LS(U)  &kp LPAR                            &kp RPAR    &kp LS(L)    &kp LS(D)  &kp LS(W)   &kp LS(V)    &kp LS(Z)
-&none   &kp LS(C)   &kp LS(I)   &kp LS(E)    &kp LS(A)  &kp SEMI                            &kp COLON   &kp LS(H)    &kp LS(T)  &kp LS(S)   &kp LS(N)    &kp LS(Q)
-&trans  &kp LS(G)   &kp LS(X)   &kp LS(J)    &kp LS(K)  &kp UNDERSCORE                      &kp EXCL    &kp LS(R)    &kp LS(M)  &kp LS(F)   &kp LS(P)    &kp RSHFT
-                                        &none  &none  &trans  &trans  &trans        &trans  &trans  &kp BACKSLASH  &kp LCBR  &kp RCBR
+                &trans  &kp PIPE    &kp EQ      &kp TILDE    &kp PLUS   &kp LT                              &kp GT      &kp CARET    &kp AMPS   &kp PERC    &kp ASTER    &trans
+                &trans  &kp LS(B)   &kp LS(Y)   &kp LS(O)    &kp LS(U)  &kp LPAR                            &kp RPAR    &kp LS(L)    &kp LS(D)  &kp LS(W)   &kp LS(V)    &kp LS(Z)
+                &none   &kp LS(C)   &kp LS(I)   &kp LS(E)    &kp LS(A)  &kp SEMI                            &kp COLON   &kp LS(H)    &kp LS(T)  &kp LS(S)   &kp LS(N)    &kp LS(Q)
+                &trans  &kp LS(G)   &kp LS(X)   &kp LS(J)    &kp LS(K)  &kp UNDERSCORE                      &kp EXCL    &kp LS(R)    &kp LS(M)  &kp LS(F)   &kp LS(P)    &kp RSHFT
+                                                        &none  &none  &trans  &trans  &trans        &trans  &trans  &kp BACKSLASH  &kp LCBR  &kp RCBR
             >;
         };
 
         spec_num {
             bindings = <
-&trans  &none   &none   &none   &none   &none                   &none   &none       &kp KP_SLASH    &kp KP_ASTERISK &kp KP_MINUS    &none
-&none   &none   &none   &none   &none   &none                   &none   &kp KP_N7   &kp KP_N8       &kp KP_N9       &kp KP_PLUS     &none
-&none   &none   &none   &none   &none   &none                   &none   &kp KP_N4   &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &none
-&none   &none   &none   &none   &none   &none                   &none   &kp KP_N1   &kp KP_N2       &kp KP_N3       &kp KP_EQUAL    &trans
-                &trans  &trans  &trans  &trans  &none       &none  &trans  &kp KP_N0  &kp KP_N0  &kp KP_DOT
+                &trans  &none   &none   &none   &none   &none                   &none   &none       &kp KP_SLASH    &kp KP_ASTERISK &kp KP_MINUS    &none
+                &none   &none   &none   &none   &none   &none                   &none   &kp KP_N7   &kp KP_N8       &kp KP_N9       &kp KP_PLUS     &none
+                &none   &none   &none   &none   &none   &none                   &none   &kp KP_N4   &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &none
+                &none   &none   &none   &none   &none   &none                   &none   &kp KP_N1   &kp KP_N2       &kp KP_N3       &kp KP_EQUAL    &trans
+                                &trans  &trans  &trans  &trans  &none       &none  &trans  &kp KP_N0  &kp KP_N0  &kp KP_DOT
             >;
         };
 
         special1 {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                      &kp F6  &kp F7          &kp F8  &kp F9          &kp F10         &kp F11
-&bt0    &bt2    &none   &none   &none   &soft_off                   &none   &out OUT_USB    &none   &out OUT_TOG    &none           &kp F12
-&bt1    &bt3    &none   &none   &none   &none                       &none   &none           &none   &none           &none           &none
-&trans  &none   &none   &none   &none   &out OUT_BLE                &none   &kp LEFT        &kp UP  &kp RIGHT       &studio_unlock  &trans
-                            &trans  &trans  &trans  &trans      &none  &none  &trans  &kp HOME  &kp DOWN  &kp END
+                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                      &kp F6  &kp F7          &kp F8  &kp F9          &kp F10         &kp F11
+                &bt0    &bt2    &none   &none   &none   &soft_off                   &none   &out OUT_USB    &none   &out OUT_TOG    &none           &kp F12
+                &bt1    &bt3    &none   &none   &none   &none                       &none   &none           &none   &none           &none           &none
+                &trans  &none   &none   &none   &none   &out OUT_BLE                &none   &kp LEFT        &kp UP  &kp RIGHT       &studio_unlock  &trans
+                                            &trans  &trans  &trans  &trans      &none  &none  &trans  &kp HOME  &kp DOWN  &kp END
             >;
         };
     };
