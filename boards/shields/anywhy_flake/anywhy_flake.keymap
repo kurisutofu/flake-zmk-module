@@ -131,8 +131,8 @@
                 &trans  &kp PIPE    &kp EQUAL   &kp TILDE    &kp PLUS   &kp LT                              &kp GT      &kp CARET    &kp AMPS   &kp PERCENT &kp ASTERISK    &trans
                 &trans  &kp LS(B)   &kp LS(Y)   &kp LS(O)    &kp LS(U)  &kp LPAR                            &kp RPAR    &kp LS(L)    &kp LS(D)  &kp LS(W)   &kp LS(V)       &kp LS(Z)
                 &trans   &kp LS(C)   &kp LS(I)   &kp LS(E)    &kp LS(A)  &kp SEMI                            &kp COLON   &kp LS(H)    &kp LS(T)  &kp LS(S)   &kp LS(N)       &kp LS(Q)
-                &trans  &kp LS(G)   &kp LS(X)   &kp LS(J)    &kp LS(K)  &kp UNDER                           &kp EXCL    &kp LS(R)    &kp LS(M)  &kp LS(F)   &kp LS(P)       &none
-                                                        &none  &none  &trans  &trans  &trans        &trans  &trans  &kp BACKSLASH  &kp LBRC  &kp RBRC
+                &trans  &kp LS(G)   &kp LS(X)   &kp LS(J)    &kp LS(K)  &kp UNDER                           &kp EXCL    &kp LS(R)    &kp LS(M)  &kp LS(F)   &kp LS(P)       &trans
+                                                        &none  &none  &trans  &kp LSHIFT  &trans        &trans  &trans  &kp BACKSLASH  &kp LBRC  &kp RBRC
             >;
         };
 
