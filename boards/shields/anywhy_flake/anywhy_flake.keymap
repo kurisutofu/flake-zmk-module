@@ -132,7 +132,7 @@
                 &trans  &kp LS(B)   &kp LS(Y)   &kp LS(O)    &kp LS(U)  &kp LPAR                            &kp RPAR    &kp LS(L)    &kp LS(D)  &kp LS(W)   &kp LS(V)       &kp LS(Z)
                 &trans   &kp LS(C)   &kp LS(I)   &kp LS(E)    &kp LS(A)  &kp SEMI                            &kp COLON   &kp LS(H)    &kp LS(T)  &kp LS(S)   &kp LS(N)       &kp LS(Q)
                 &trans  &kp LS(G)   &kp LS(X)   &kp LS(J)    &kp LS(K)  &kp UNDER                           &kp EXCL    &kp LS(R)    &kp LS(M)  &kp LS(F)   &kp LS(P)       &trans
-                                                        &none  &none  &trans  &kp LSHIFT  &trans        &trans  &trans  &kp BACKSLASH  &kp LBRC  &kp RBRC
+                                                        &none  &none  &trans  &trans  &trans        &trans  &trans  &kp BACKSLASH  &kp LBRC  &kp RBRC
             >;
         };
 
@@ -148,11 +148,11 @@
 
         special1 {
             bindings = <
-                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                              &kp F6  &kp F7          &kp F8  &kp F9          &kp F10         &kp F11
-                &bt0    &bt2    &none   &none   &none   &soft_off                           &none   &out OUT_USB    &none   &out OUT_TOG    &none           &kp F12
-                &bt1    &bt3    &none   &none   &none   &none                               &none   &none           &none   &none           &none           &none
-                &trans  &none   &none   &none   &none   &out OUT_BLE                        &none   &kp LEFT        &kp UP  &kp RIGHT       &studio_unlock  &trans
-                                    &trans  &trans  &trans  &trans  &to QWERTY      &to ENGRAM  &trans  &kp HOME  &kp DOWN  &kp END
+                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                              &kp F6  &kp F7          &kp F8      &kp F9          &kp F10         &kp F11
+                &bt0    &bt2    &none   &none   &none   &soft_off                           &none   &out OUT_USB    &none       &out OUT_TOG    &none           &kp F12
+                &bt1    &bt3    &none   &none   &none   &none                               &none   &none           &none       &none           &kp END         &studio_unlock
+                &trans  &none   &none   &none   &none   &out OUT_BLE                        &none   &kp LEFT        &kp HOME    &kp UP        &kp RIGHT  &trans
+                                    &trans  &trans  &trans  &trans  &to QWERTY      &to ENGRAM  &trans  &none  &kp LEFT  &kp DOWN
             >;
         };
     };
