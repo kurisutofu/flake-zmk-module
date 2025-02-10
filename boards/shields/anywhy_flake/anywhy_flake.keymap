@@ -37,6 +37,12 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 4 &bt BT_CLR>;
         };
+
+        jp: to_japanese {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(SHFT) &kp GRAVE>;
+        };
     };
 
     behaviors {
@@ -106,7 +112,7 @@
                 &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                                   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp MINUS
                 &kp LGUI    &kp A   &kp S   &kp D   &kp F   &kp G                                   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp APOS
                 &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    MO_TOG(SPEC1)
-                    &kp F13  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE  &kp BSPC       &kp RET  &mt LSHIFT BSLH  &kp GRAVE  &kp LBKT  &kp RBKT
+                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE  &kp BSPC       &kp RET  &mt LSHIFT BSLH  &none  &kp LBKT  &kp RBKT
             >;
         };
 
@@ -116,7 +122,7 @@
                 &kp TAB     &kp B   &kp Y   &kp O   &kp U   &kp SQT                                             &kp DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
                 &kp LGUI    &kp C   &kp I   &kp E   &kp A   &kp COMMA                                           &kp DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
                 &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &kp MINUS                                           &kp QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(SPEC1)
-                    &none  MO_TOG(SPEC_NUM)  &kp LALT  &lt ENGRAM_RAISED SPACE &kp BSPC         &kp RET  &lt ENGRAM_RAISED AT  &kp KP_SLASH  &kp LBKT  &kp RBKT
+                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &lt ENGRAM_RAISED SPACE &kp BSPC         &kp RET  &lt ENGRAM_RAISED AT  &kp KP_SLASH  &kp LBKT  &kp RBKT
             >;
         };
 
