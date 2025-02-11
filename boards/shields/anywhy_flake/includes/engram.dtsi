@@ -33,28 +33,7 @@
         /omit-if-no-ref/ EN_N5: ENGRAM_N5 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-                bindings = <&kp N5  >, <&kp LT  >;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        /omit-if-no-ref/ EN_SQT: ENGRAM_SQT {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-                bindings = <&kp SQT  >, <&kp LPAR  >;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        /omit-if-no-ref/ EN_COMMA: ENGRAM_COMMA {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-                bindings = <&kp COMMA  >, <&kp SEMI  >;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        /omit-if-no-ref/ EN_MINUS: ENGRAM_MINUS {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-                bindings = <&kp MINUS  >, <&kp UNDER>;
+                bindings = <&kp N5>, <&kp LT>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -93,6 +72,27 @@
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        /omit-if-no-ref/ EN_SQT: ENGRAM_SQT {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+                bindings = <&kp SQT>, <&kp LPAR>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /omit-if-no-ref/ EN_COMMA: ENGRAM_COMMA {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+                bindings = <&kp COMMA>, <&kp SEMI>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        /omit-if-no-ref/ EN_MINUS: ENGRAM_MINUS {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+                bindings = <&kp MINUS>, <&kp UNDER>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         /omit-if-no-ref/ EN_DQT: ENGRAM_DQT {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
@@ -121,17 +121,10 @@
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        /omit-if-no-ref/ EN_LBKT: ENGRAM_LBKT {
+        /omit-if-no-ref/ EN_AT: ENGRAM_AT {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-                bindings = <&kp LBKT>, <&kp LBRC>;
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        /omit-if-no-ref/ EN_RBKT: ENGRAM_RBKT {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-                bindings = <&kp RBKT  >, <&kp RBRC>;
+                bindings = <&kp AT>, <&kp GRAVE>;
         mods = <(MOD_LSFT|MOD_RSFT)>;
         };
     };
