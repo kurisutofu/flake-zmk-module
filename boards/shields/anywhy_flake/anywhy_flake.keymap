@@ -40,7 +40,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
-            bindings = <&kp C>, <&kp LCTRL(V)>;
+            bindings = <&kp C>, <&kp LC(V)>;
         };
     };
 
