@@ -1,0 +1,12 @@
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    behaviors {
+        /omit-if-no-ref/ EN_DQT: ENGRAM_DOUBLEQUOTE {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DQT>, <&kp RPAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+};
