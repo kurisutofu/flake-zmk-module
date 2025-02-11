@@ -39,7 +39,7 @@
         tdc: tap_dance_c {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <200>;
             bindings = <&kp C>, <&kp LC(V)>;
         };
     };
