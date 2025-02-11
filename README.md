@@ -1,1 +1,1 @@
-![Current Mapping](img/Full_Mapping.svg)
+<img src="img/Full_Mapping.svg" width="800">
