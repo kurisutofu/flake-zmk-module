@@ -3,14 +3,6 @@
 
 / {
     behaviors {
-
-        /omit-if-no-ref/ tdc: tap_dance_c {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <100>;
-            bindings = <&kp C>, <&kp LCTRL(V)>;
-        };
-
         /omit-if-no-ref/ EN_N1: ENGRAM_N1 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
