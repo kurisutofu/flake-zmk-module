@@ -1,44 +1,18 @@
 #include <behaviors.dtsi>
-#include "engram.dtsi"
-#include <dt-bindings/zmk/bt.h>
+#include "includes/engram.dtsi"
+#include "includes/bluetooth.dtsi"
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 #define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+#define QWERTY          0
+#define ENGRAM          1
+#define SPEC_NUM        2
+#define SPEC1           3
 
 / {
 
     macros {
-        bt_clr_0: bt_clr_0 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
-        };
-
-        bt_clr_1: bt_clr_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
-        };
-
-        bt_clr_2: bt_clr_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &bt BT_CLR>;
-        };
-
-        bt_clr_3: bt_clr_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &bt BT_CLR>;
-        };
-
-        bt_clr_4: bt_clr_4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &bt BT_CLR>;
-        };
-
         jp: to_japanese {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -47,41 +21,6 @@
     };
 
     behaviors {
-        bt0: bt0 {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&bt BT_SEL 0>, <&bt_clr_0>;
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt1: bt1 {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&bt BT_SEL 1>, <&bt_clr_1>;
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt2: bt2 {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&bt BT_SEL 2>, <&bt_clr_2>;
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt3: bt3 {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&bt BT_SEL 3>, <&bt_clr_3>;
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt4: bt4 {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&bt BT_SEL 4>, <&bt_clr_4>;
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
         taskman: task_manager {
             compatible = "zmk,behavior-mod-morph";
             bindings = <&kp ESC>, <&kp LS(LC(ESC))>;
@@ -99,11 +38,7 @@
     };
 
     keymap {
-        #define QWERTY          0
-        #define ENGRAM          1
-        #define ENGRAM_RAISED   2
-        #define SPEC_NUM        3
-        #define SPEC1           4
+
 
         compatible = "zmk,keymap";
 
@@ -113,27 +48,17 @@
                 &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                                   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp MINUS
                 &kp LGUI    &kp A   &kp S   &kp D   &kp F   &kp G                                   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp APOS
                 &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    MO_TOG(SPEC1)
-                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE  &kp BSPC       &kp RET  &mt LSHIFT BSLH  &EN_DQT  &kp LBKT  &kp RBKT
+                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE  &kp BSPC       &kp RET  &kp BSLH  &none  &kp LBKT  &kp RBKT
             >;
         };
 
         engram {
             bindings = <
-                &taskman    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                              &kp N6      &kp N7  &kp N8  &kp N9  &kp N0  &kp DEL
-                &kp TAB     &kp B   &kp Y   &kp O   &kp U   &kp SQT                                             &kp DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
-                &kp LGUI    &kp C   &kp I   &kp E   &kp A   &kp COMMA                                           &kp DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
-                &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &kp MINUS                                           &kp QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(SPEC1)
-                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &lt ENGRAM_RAISED SPACE &kp BSPC         &kp RET  &lt ENGRAM_RAISED AT  &kp KP_SLASH  &kp LBKT  &kp RBKT
-            >;
-        };
-
-        engram_raised {
-            bindings = <
-                &trans  &kp PIPE    &kp EQUAL   &kp TILDE    &kp PLUS   &kp LT                              &kp GT      &kp CARET    &kp AMPS   &kp PERCENT &kp ASTERISK    &trans
-                &trans  &kp LS(B)   &kp LS(Y)   &kp LS(O)    &kp LS(U)  &kp LPAR                            &kp RPAR    &kp LS(L)    &kp LS(D)  &kp LS(W)   &kp LS(V)       &kp LS(Z)
-                &trans   &kp LS(C)   &kp LS(I)   &kp LS(E)    &kp LS(A)  &kp SEMI                            &kp COLON   &kp LS(H)    &kp LS(T)  &kp LS(S)   &kp LS(N)       &kp LS(Q)
-                &trans  &kp LS(G)   &kp LS(X)   &kp LS(J)    &kp LS(K)  &kp UNDER                           &kp EXCL    &kp LS(R)    &kp LS(M)  &kp LS(F)   &kp LS(P)       &trans
-                                                        &none  &none  &trans  &trans  &trans        &trans  &trans  &kp BACKSLASH  &kp LBRC  &kp RBRC
+                &taskman    &EN_N1  &EN_N2  &EN_N3  &EN_N4  &EN_N5                                              &EN_N6      &EN_N7  &EN_N8  &EN_N9  &EN_N0  &kp DEL
+                &kp TAB     &kp B   &kp Y   &kp O   &kp U   &EN_SQT                                             &EN_DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
+                &kp LGUI    &kp C   &kp I   &kp E   &kp A   &EN_COMMA                                           &EN_DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
+                &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &EN_MINUS                                           &EN_QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(SPEC1)
+                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE &kp BSPC         &kp RET  &EN_AT &EN_SLASH  &EN_LBKT  &EN_RBKT
             >;
         };
 
