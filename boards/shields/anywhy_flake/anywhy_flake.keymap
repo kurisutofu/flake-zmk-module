@@ -1,138 +1,91 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
+#include "includes/engram.dtsi"
+#include "includes/bluetooth.dtsi"
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+
+#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+#define QWERTY          0
+#define ENGRAM          1
+#define SPEC_NUM        2
+#define SPEC1           3
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        bt_sel_3 {
-            bindings = <&bt3>;
-            key-positions = <42 30>;
-            layers = <2>;
-        };
-
-        bt_sel_4 {
-            bindings = <&bt4>;
-            key-positions = <30 18>;
-            layers = <2>;
-        };
-    };
 
     macros {
-        bt_clr_0: bt_clr_0 {
+        jp: to_japanese {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &bt BT_CLR>;
-            label = "BT_CLR_0";
-        };
-
-        bt_clr_1: bt_clr_1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &bt BT_CLR>;
-            label = "BT_CLR_1";
-        };
-
-        bt_clr_2: bt_clr_2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &bt BT_CLR>;
-            label = "BT_CLR_2";
-        };
-
-        bt_clr_3: bt_clr_3 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 3 &bt BT_CLR>;
-            label = "BT_CLR_3";
-        };
-
-        bt_clr_4: bt_clr_4 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &bt BT_CLR>;
-            label = "BT_CLR_4";
+            bindings = <&kp LA(LSHIFT) &kp GRAVE>;
         };
     };
 
     behaviors {
-        bt0: bt0 {
+        taskman: task_manager {
             compatible = "zmk,behavior-mod-morph";
-            label = "BT0";
-            bindings = <&bt BT_SEL 0>, <&bt_clr_0>;
-
+            bindings = <&kp ESC>, <&kp LS(LC(ESC))>;
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
         };
 
-        bt1: bt1 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BT1";
-            bindings = <&bt BT_SEL 1>, <&bt_clr_1>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
         };
 
-        bt2: bt2 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BT2";
-            bindings = <&bt BT_SEL 2>, <&bt_clr_2>;
-
+        tdc: tap_dance_c {
+            compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt3: bt3 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BT3";
-            bindings = <&bt BT_SEL 3>, <&bt_clr_3>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        bt4: bt4 {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BT4";
-            bindings = <&bt BT_SEL 4>, <&bt_clr_4>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C>, <&kp LC(V)>;
         };
     };
 
     keymap {
+
+
         compatible = "zmk,keymap";
 
-        base {
+        qwerty {
             bindings = <
-&kp ESC    &kp N1  &kp N2    &kp N3    &kp N4     &kp N5            &kp N6  &kp N7     &kp N8     &kp N9    &kp N0     &kp MINUS
-&kp ENTER  &kp Q   &kp W     &kp E     &kp R      &kp T             &kp Y   &kp U      &kp I      &kp O     &kp P      &kp BSPC
-&kp TAB    &kp A   &kp S     &kp D     &kp F      &kp G             &kp H   &kp J      &kp K      &kp L     &kp SEMI   &kp APOS
-&kp LBKT   &kp Z   &kp X     &kp C     &kp V      &kp B             &kp N   &kp M      &kp COMMA  &kp DOT   &kp FSLH   &kp RBKT
-                   &kp LGUI  &kp LALT  &kp LCTRL  &kp SPACE  &mo 1  &mo 2   &kp LSHFT  &kp LGUI   &kp LALT  &kp LCTRL
+                &taskman    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                  &kp N6  &kp N7  &kp N8      &kp N9  &kp N0      &kp DEL
+                &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                                   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp MINUS
+                &kp LGUI    &kp A   &kp S   &kp D   &kp F   &kp G                                   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp APOS
+                &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    MO_TOG(SPEC1)
+                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE  &kp BSPC       &kp RET  &kp BSLH  &none  &kp LBKT  &kp RBKT
             >;
         };
 
-        num {
+        engram {
             bindings = <
-&none  &none     &none          &none      &none      &none            &none      &none   &none   &none   &none      &none
-&none  &kp ESC   &kp BACKSPACE  &kp TAB    &kp ENTER  &kp DEL          &kp GRAVE  &kp N7  &kp N8  &kp N9  &kp MINUS  &none
-&none  &kp LGUI  &kp LALT       &kp LCTRL  &kp LSHFT  &kp LBKT         &kp EQUAL  &kp N4  &kp N5  &kp N6  &kp N0     &none
-&none  &kp LEFT  &kp DOWN       &kp UP     &kp RIGHT  &kp RBKT         &kp SQT    &kp N1  &kp N2  &kp N3  &kp BSLH   &none
-                 &trans         &trans     &trans     &trans    &none  &none      &trans  &trans  &trans  &trans
+                &taskman    &EN_N1  &EN_N2  &EN_N3  &EN_N4  &EN_N5                                              &EN_N6      &EN_N7  &EN_N8  &EN_N9  &EN_N0  &kp DEL
+                &kp TAB     &kp B   &kp Y   &kp O   &kp U   &EN_SQT                                             &EN_DQT     &kp L   &kp D   &kp W   &kp V   &EN_SLASH
+                &kp LGUI    &tdc    &kp I   &kp E   &kp A   &EN_COMMA                                           &EN_DOT     &kp H   &kp T   &kp S   &kp N   &EN_AT
+                &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &EN_MINUS                                           &EN_QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(SPEC1)
+                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE &kp BSPC         &kp RET  &kp Q &kp Z  &kp LBKT  &kp RBKT
             >;
         };
 
-        fn {
+        spec_num {
             bindings = <
-&none  &none    &none   &none   &none   &none                  &none  &none       &none         &none         &none         &none
-&none  &kp F12  &kp F7  &kp F8  &kp F9  &soft_off              &bt2   &kp C_MUTE  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_BRI_UP  &none
-&none  &kp F10  &kp F4  &kp F5  &kp F6  &kp CAPS               &bt1   &kp RSHFT   &kp RCTRL     &kp RALT      &kp RGUI      &none
-&none  &kp F11  &kp F1  &kp F2  &kp F3  &studio_unlock         &bt0   &kp C_PP    &kp C_PREV    &kp C_NEXT    &kp C_BRI_DN  &none
-                &trans  &trans  &trans  &trans          &none  &none  &trans      &trans        &trans        &trans
+                &trans  &none   &none   &none   &none   &none                   &none   &none       &kp KP_SLASH    &kp KP_ASTERISK &kp KP_MINUS    &none
+                &none   &none   &none   &none   &none   &none                   &none   &kp KP_N7   &kp KP_N8       &kp KP_N9       &kp KP_PLUS     &none
+                &none   &none   &none   &none   &none   &none                   &none   &kp KP_N4   &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &none
+                &none   &none   &none   &none   &none   &none                   &none   &kp KP_N1   &kp KP_N2       &kp KP_N3       &kp KP_EQUAL    &trans
+                                &trans  &trans  &trans  &trans  &none       &none  &trans  &kp KP_N0  &kp KP_N0  &kp KP_DOT
+            >;
+        };
+
+        special1 {
+            bindings = <
+                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                              &kp F6  &kp F7          &kp F8      &kp F9          &kp F10         &kp F11
+                &bt0    &bt2    &none   &none   &none   &soft_off                           &none   &out OUT_USB    &none       &out OUT_TOG    &none           &kp F12
+                &bt1    &bt3    &none   &none   &none   &none                               &none   &none           &none       &none           &kp END         &studio_unlock
+                &trans  &none   &none   &none   &none   &out OUT_BLE                        &none   &kp LEFT        &kp HOME    &kp UP        &kp RIGHT  &trans
+                                    &trans  &trans  &trans  &trans  &to QWERTY      &to ENGRAM  &trans  &none  &kp LEFT  &kp DOWN
             >;
         };
     };
