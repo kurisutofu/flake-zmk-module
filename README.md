@@ -1,1 +1,1 @@
-<img src="img/Full_Mapping.svg" width="800">
+<img src="img/Full_Layout.png?" width="1000">
