@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
-#define QWERTY          0
-#define ENGRAM          1
+#define ENGRAM          0
+#define QWERTY          1
 #define SPEC_NUM        2
 #define SPEC1           3
 
@@ -75,7 +75,7 @@
                 &none   &none   &none   &none   &none   &none                   &none   &kp KP_N7   &kp KP_N8       &kp KP_N9       &kp KP_PLUS     &none
                 &none   &none   &none   &none   &none   &none                   &none   &kp KP_N4   &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &none
                 &none   &none   &none   &none   &none   &none                   &none   &kp KP_N1   &kp KP_N2       &kp KP_N3       &kp KP_EQUAL    &trans
-                                &trans  &trans  &trans  &trans  &none       &none  &trans  &kp KP_N0  &kp KP_N0  &kp KP_DOT
+                                &trans  &trans  &trans  &trans  &trans       &none  &trans  &kp KP_N0  &kp KP_N0  &kp KP_DOT
             >;
         };
 
