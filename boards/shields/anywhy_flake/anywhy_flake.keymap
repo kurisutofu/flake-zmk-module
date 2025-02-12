@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
-#define QWERTY          0
-#define ENGRAM          1
+#define ENGRAM          0
+#define QWERTY          1
 #define SPEC_NUM        2
 #define SPEC1           3
 
@@ -39,7 +39,7 @@
         tdc: tap_dance_c {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <130>;
+            tapping-term-ms = <150>;
             bindings = <&kp C>, <&kp LC(V)>;
         };
     };
@@ -49,23 +49,23 @@
 
         compatible = "zmk,keymap";
 
+        engram {
+            bindings = <
+                &taskman    &EN_N1  &EN_N2  &EN_N3  &EN_N4  &EN_N5                                              &EN_N6      &EN_N7  &EN_N8  &EN_N9  &EN_N0  &kp DEL
+                &kp TAB     &kp B   &kp Y   &kp O   &kp U   &EN_SQT                                             &EN_DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
+                &kp LGUI    &tdc    &kp I   &kp E   &kp A   &EN_COMMA                                           &EN_DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
+                &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &EN_MINUS                                           &EN_QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(SPEC1)
+                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  MO_TOG(SPEC_NUM)         &kp BSPC  &kp RET  &EN_AT  &kp RBKT  &EN_SLASH
+            >;
+        };
+
         qwerty {
             bindings = <
                 &taskman    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                  &kp N6  &kp N7  &kp N8      &kp N9  &kp N0      &kp DEL
                 &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                                   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp MINUS
                 &kp LGUI    &kp A   &kp S   &kp D   &kp F   &kp G                                   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp APOS
                 &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    MO_TOG(SPEC1)
-                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE  &kp BSPC       &kp RET  &kp BSLH  &none  &kp LBKT  &kp RBKT
-            >;
-        };
-
-        engram {
-            bindings = <
-                &taskman    &EN_N1  &EN_N2  &EN_N3  &EN_N4  &EN_N5                                              &EN_N6      &EN_N7  &EN_N8  &EN_N9  &EN_N0  &kp DEL
-                &kp TAB     &kp B   &kp Y   &kp O   &kp U   &EN_SQT                                             &EN_DQT     &kp L   &kp D   &kp W   &kp V   &EN_SLASH
-                &kp LGUI    &tdc    &kp I   &kp E   &kp A   &EN_COMMA                                           &EN_DOT     &kp H   &kp T   &kp S   &kp N   &EN_AT
-                &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &EN_MINUS                                           &EN_QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(SPEC1)
-                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE &kp BSPC         &kp RET  &kp Q &kp Z  &kp LBKT  &kp RBKT
+                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  MO_TOG(SPEC_NUM)       &kp BSPC  &kp RET  &none  &kp RBKT  &kp BSLH
             >;
         };
 
@@ -75,7 +75,7 @@
                 &none   &none   &none   &none   &none   &none                   &none   &kp KP_N7   &kp KP_N8       &kp KP_N9       &kp KP_PLUS     &none
                 &none   &none   &none   &none   &none   &none                   &none   &kp KP_N4   &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &none
                 &none   &none   &none   &none   &none   &none                   &none   &kp KP_N1   &kp KP_N2       &kp KP_N3       &kp KP_EQUAL    &trans
-                                &trans  &trans  &trans  &trans  &none       &none  &trans  &kp KP_N0  &kp KP_N0  &kp KP_DOT
+                                &trans  &trans  &trans  &trans  &trans       &none  &trans  &kp KP_N0  &kp KP_N0  &kp KP_DOT
             >;
         };
 
