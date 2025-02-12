@@ -55,7 +55,7 @@
                 &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                                   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp MINUS
                 &kp LGUI    &kp A   &kp S   &kp D   &kp F   &kp G                                   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp APOS
                 &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    MO_TOG(SPEC1)
-                    &jp  MO_TOG(SPEC_NUM)  &kp LALT  &mt LSHIFT SPACE  &kp BSPC       &kp RET  &kp BSLH  &none  &kp LBKT  &kp RBKT
+                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  MO_TOG(SPEC_NUM)       &kp BSPC  &kp RET  &none  &kp RBKT  &kp BSLH
             >;
         };
 
@@ -65,7 +65,7 @@
                 &kp TAB     &kp B   &kp Y   &kp O   &kp U   &EN_SQT                                             &EN_DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
                 &kp LGUI    &tdc    &kp I   &kp E   &kp A   &EN_COMMA                                           &EN_DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
                 &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &EN_MINUS                                           &EN_QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(SPEC1)
-                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  MO_TOG(SPEC_NUM)         &kp BSPC  &kp RET  &kp EN_AT  &kp RBKT  &EN_SLASH
+                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  MO_TOG(SPEC_NUM)         &kp BSPC  &kp RET  &EN_AT  &kp RBKT  &EN_SLASH
             >;
         };
 
