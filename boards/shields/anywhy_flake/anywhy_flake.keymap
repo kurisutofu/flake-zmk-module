@@ -36,6 +36,20 @@
             bindings = <&mo>, <&tog>;
         };
 
+        tdnum: tap_dance_num {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <MO_TOG(SPEC_NUM)>;
+        };
+
+        tdspec1: tap_dance_spec1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <MO_TOG(SPEC1)>;
+        };
+
         tdc: tap_dance_c {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -54,8 +68,8 @@
                 &taskman    &EN_N1  &EN_N2  &EN_N3  &EN_N4  &EN_N5                                              &EN_N6      &EN_N7  &EN_N8  &EN_N9  &EN_N0  &kp DEL
                 &kp TAB     &kp B   &kp Y   &kp O   &kp U   &EN_SQT                                             &EN_DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
                 &kp LGUI    &tdc    &kp I   &kp E   &kp A   &EN_COMMA                                           &EN_DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
-                &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &EN_MINUS                                           &EN_QMARK   &kp R   &kp M   &kp F   &kp P   MO_TOG(SPEC_NUM)
-                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  MO_TOG(SPEC1)         &kp BSPC  &kp RET  &EN_AT  &kp RBKT  &EN_SLASH
+                &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &EN_MINUS                                           &EN_QMARK   &kp R   &kp M   &kp F   &kp P   &tap_dance_num
+                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  &tap_dance_spec1         &kp BSPC  &kp RET  &EN_AT  &kp RBKT  &EN_SLASH
             >;
         };
 
@@ -64,8 +78,8 @@
                 &taskman    &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                                  &kp N6  &kp N7  &kp N8      &kp N9  &kp N0      &kp DEL
                 &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                                   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp MINUS
                 &kp LGUI    &kp A   &kp S   &kp D   &kp F   &kp G                                   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp APOS
-                &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    MO_TOG(SPEC_NUM)
-                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  MO_TOG(SPEC1)       &kp BSPC  &kp RET  &none  &kp RBKT  &kp BSLH
+                &kp LCTRL   &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    &tap_dance_num
+                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  &tap_dance_spec1       &kp BSPC  &kp RET  &none  &kp RBKT  &kp BSLH
             >;
         };
 
@@ -83,9 +97,9 @@
             bindings = <
                 &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                              &kp F6      &kp F7          &kp F8      &kp F9          &kp F10     &kp F11
                 &bt0    &bt2    &none   &none   &none   &soft_off                           &none       &out OUT_USB    &none       &out OUT_TOG    &none       &kp F12
-                &bt1    &bt3    &none   &none   &none   &none                               &kp UP      &kp LEFT        &kp RIGHT   &none           &kp END     &studio_unlock
-                &trans  &none   &none   &none   &none   &out OUT_BLE                        &kp DOWN    &kp LEFT        &kp HOME    &kp UP        &kp RIGHT  &trans
-                                    &trans  &trans  &trans  &trans  &trans      &to ENGRAM  &to QWERTY  &none  &kp LEFT  &kp DOWN
+                &bt1    &bt3    &none   &none   &none   &none                               &none       &kp LEFT        &kp UP   &kp RIGHT        &none     &studio_unlock
+                &trans  &none   &none   &none   &none   &out OUT_BLE                        &none       &kp HOME           &kp DOWN    &kp END        &none  &trans
+                                    &trans  &trans  &trans  &trans  &trans      &to ENGRAM  &kp LSHIFT  &to QWERTY  &none  &none
             >;
         };
     };
