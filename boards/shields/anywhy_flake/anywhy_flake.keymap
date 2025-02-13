@@ -40,14 +40,14 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <MO_TOG(SPEC_NUM)>;
+            bindings = <&mo SPEC_NUM>, <MO_TOG(SPEC_NUM)>;
         };
 
         tdspec1: tap_dance_spec1 {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&none>, <MO_TOG(SPEC1)>;
+            bindings = <&mo SPEC1>, <MO_TOG(SPEC1)>;
         };
 
         tdc: tap_dance_c {
