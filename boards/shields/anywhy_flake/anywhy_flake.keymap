@@ -65,11 +65,11 @@
 
         engram {
             bindings = <
-                &taskman    &EN_N1  &EN_N2  &EN_N3  &EN_N4  &EN_N5                                              &EN_N6      &EN_N7  &EN_N8  &EN_N9  &EN_N0  &kp DEL
-                &kp TAB     &kp B   &kp Y   &kp O   &kp U   &EN_SQT                                             &EN_DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
-                &kp LGUI    &tdc    &kp I   &kp E   &kp A   &EN_COMMA                                           &EN_DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
-                &kp LCTRL   &kp G   &kp X   &kp J   &kp K   &EN_MINUS                                           &EN_QMARK   &kp R   &kp M   &kp F   &kp P   &tdnum
-                    &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  &tdspec1         &kp BSPC  &kp RET  &EN_AT  &kp RBKT  &EN_SLASH
+                &taskman    &EN_N1      &EN_N2  &EN_N3  &EN_N4  &EN_N5                          &EN_N6      &EN_N7  &EN_N8  &EN_N9  &EN_N0  &kp DEL
+                &kp TAB     &kp B       &kp Y   &kp O   &kp U   &EN_SQT                         &EN_DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
+                &kp LGUI    &tdc        &kp I   &kp E   &kp A   &EN_COMMA                       &EN_DOT     &kp H   &kp T   &kp S   &kp N   &EN_QMARK
+                &kp LCTRL   &EN_MINUS   &kp X   &kp J   &kp K   &kp G                           &kp P       &kp R   &kp M   &kp F   &kp P   &tdnum
+                            &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  &tdspec1         &kp BSPC  &kp RET  &EN_AT  &kp RBKT  &EN_SLASH
             >;
         };
 
