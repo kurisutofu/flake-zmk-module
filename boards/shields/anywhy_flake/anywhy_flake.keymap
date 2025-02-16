@@ -67,8 +67,8 @@
             bindings = <
                 &taskman    &EN_N1      &EN_N2  &EN_N3  &EN_N4  &EN_N5                          &EN_N6      &EN_N7  &EN_N8  &EN_N9  &EN_N0  &kp DEL
                 &kp TAB     &kp B       &kp Y   &kp O   &kp U   &EN_SQT                         &EN_DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
-                &kp LGUI    &tdc        &kp I   &kp E   &kp A   &EN_COMMA                       &EN_DOT     &kp H   &kp T   &kp S   &kp N   &EN_QMARK
-                &kp LCTRL   &EN_MINUS   &kp X   &kp J   &kp K   &kp G                           &kp P       &kp R   &kp M   &kp F   &kp P   &tdnum
+                &kp LGUI    &tdc        &kp I   &kp E   &kp A   &EN_COMMA                       &EN_DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
+                &kp LCTRL   &EN_MINUS   &kp X   &kp J   &kp K   &kp G                           &kp P       &kp R   &kp M   &kp F   &EN_QMARK   &tdnum
                             &jp  &kp LBKT  &kp LALT  &mt LSHIFT SPACE  &tdspec1         &kp BSPC  &kp RET  &EN_AT  &kp RBKT  &EN_SLASH
             >;
         };
@@ -89,17 +89,17 @@
                 &none   &none   &none   &none   &none   &none                   &none   &kp KP_N7   &kp KP_N8       &kp KP_N9       &kp KP_PLUS     &none
                 &none   &none   &none   &none   &none   &none                   &none   &kp KP_N4   &kp KP_N5       &kp KP_N6       &kp KP_PLUS     &none
                 &none   &none   &none   &none   &none   &none                   &none   &kp KP_N1   &kp KP_N2       &kp KP_N3       &kp KP_EQUAL    &trans
-                                &trans  &trans  &trans  &trans  &trans       &none  &trans  &kp KP_N0  &kp KP_N0  &kp KP_DOT
+                                &trans  &trans  &trans  &trans  &trans       &trans  &trans  &kp KP_N0  &kp KP_N0  &kp KP_DOT
             >;
         };
 
         special1 {
             bindings = <
-                &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                              &kp F6      &kp F7          &kp F8      &kp F9          &kp F10     &kp F11
-                &bt0    &bt2    &none   &none   &none   &soft_off                           &none       &out OUT_USB    &none       &out OUT_TOG    &none       &kp F12
-                &bt1    &bt3    &none   &none   &none   &none                               &none       &kp LEFT        &kp UP   &kp RIGHT        &none     &studio_unlock
-                &trans  &none   &none   &none   &none   &out OUT_BLE                        &none       &kp HOME           &kp DOWN    &kp END        &none  &trans
-                                    &trans  &trans  &trans  &trans  &trans      &to ENGRAM  &kp LSHIFT  &to QWERTY  &none  &none
+                &trans  &kp F1  &kp F2  &kp F3          &kp F4          &kp F5                          &kp F6        &kp F7      &kp F8      &kp F9      &kp F10     &kp F11
+                &bt0    &bt2    &none   &soft_off       &out OUT_USB    &trans                          &trans        &none       &none       &none       &none       &kp F12
+                &bt1    &bt3    &none   &out OUT_BLE    &none           &trans                          &trans        &kp LEFT    &kp UP      &kp RIGHT   &none       &studio_unlock
+                &trans  &none   &none   &none           &none           &to QWERTY                      &to ENGRAM    &kp HOME    &kp DOWN    &kp END     &none       &trans
+                                                     &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LSHIFT  &trans  &none
             >;
         };
     };
