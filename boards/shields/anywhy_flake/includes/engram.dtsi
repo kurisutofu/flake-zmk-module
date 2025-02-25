@@ -135,7 +135,6 @@
                 #binding-cells = <0>;
                 bindings = <&kp SLASH>, <&kp BACKSLASH>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
-                label = "/ / \\";
         };
 
         /omit-if-no-ref/ EN_AT: ENGRAM_AT {
