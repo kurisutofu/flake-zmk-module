@@ -112,7 +112,7 @@
                 #binding-cells = <0>;
                 bindings = <&kp DQT>, <&kp RPAR>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
-                label = """ / )";
+                label = "Quote / )";
         };
 
         /omit-if-no-ref/ EN_DOT: ENGRAM_DOT {
