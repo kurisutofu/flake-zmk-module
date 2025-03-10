@@ -53,12 +53,28 @@
             label = "TD Spec1";
         };
 
-        tdc: tap_dance_c {
+        tdv: tap_dance_v {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp LA(LSHIFT)>, <&kp LC(V)>;
-            label = "JP/COPY";
+            label = "JP/PASTE";
+        };
+
+        tdz: tap_dance_z {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&EN_MINUS, <&kp LC(Z)>;
+            label = "JP/UNDO";
+        };
+
+        tds: tap_dance_s {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <250>;
+            bindings = <&kp LBKT, <&kp LC(S)>;
+            label = "JP/SAVE";
         };
     };
 
@@ -72,8 +88,8 @@
                 &taskman    &EN_N1      &EN_N2  &EN_N3  &EN_N4  &EN_N5                          &EN_N6      &EN_N7  &EN_N8  &EN_N9  &EN_N0  &kp DEL
                 &kp TAB     &kp B       &kp Y   &kp O   &kp U   &EN_SQT                         &EN_DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
                 &kp LGUI    &kp C       &kp I   &kp E   &kp A   &EN_COMMA                       &EN_DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
-                &kp LALT    &EN_MINUS   &kp X   &kp J   &kp K   &kp G                           &kp P       &kp R   &kp M   &kp F   &EN_QMARK   &tdnum
-                            &tdc  &kp LBKT  &kp LCTRL  &mt LSHIFT SPACE  &tdspec1         &kp RET  &kp BSPC  &EN_AT  &kp RBKT  &EN_SLASH
+                &kp LALT    &tdz   &kp X   &kp J   &kp K   &kp G                           &kp P       &kp R   &kp M   &kp F   &EN_QMARK   &tdnum
+                            &tdv  &tds  &kp LCTRL  &mt LSHIFT SPACE  &tdspec1         &kp RET  &kp BSPC  &EN_AT  &kp RBKT  &EN_SLASH
             >;
         };
 
@@ -83,7 +99,7 @@
                 &kp TAB     &kp Q   &kp W   &kp E   &kp R   &kp T                                   &kp Y   &kp U   &kp I       &kp O   &kp P       &kp MINUS
                 &kp LGUI    &kp A   &kp S   &kp D   &kp F   &kp G                                   &kp H   &kp J   &kp K       &kp L   &kp SEMI    &kp APOS
                 &kp LALT    &kp Z   &kp X   &kp C   &kp V   &kp B                                   &kp N   &kp M   &kp COMMA   &kp DOT &kp FSLH    &tdnum
-                    &tdc  &kp LBKT  &kp LCTRL  &mt LSHIFT SPACE  &tdspec1       &kp RET  &kp BSPC  &none  &kp RBKT  &kp BSLH
+                    &tdv  &kp LBKT  &kp LCTRL  &mt LSHIFT SPACE  &tdspec1       &kp RET  &kp BSPC  &none  &kp RBKT  &kp BSLH
             >;
         };
 
