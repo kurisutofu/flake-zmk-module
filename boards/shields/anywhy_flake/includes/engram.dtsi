@@ -140,7 +140,7 @@
         /omit-if-no-ref/ EN_AT: ENGRAM_AT {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
-                bindings = <&kp AT>, <&kp GRAVE>;
+                bindings = <&kp AT>, <&kp PLUS>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
                 label = "@ / `";
         };
