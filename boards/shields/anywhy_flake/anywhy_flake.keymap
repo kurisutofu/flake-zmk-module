@@ -65,7 +65,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <250>;
-            bindings = <&kp G>, <&kp LC(Z)>;
+            bindings = <&kp LBKT>, <&kp LC(Z)>;
             label = "JP/UNDO";
         };
 
