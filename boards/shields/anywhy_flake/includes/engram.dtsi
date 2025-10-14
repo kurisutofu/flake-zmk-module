@@ -83,7 +83,7 @@
                 label = "0 / *";
         };
 
-        /omit-if-no-ref/ {EN_SQT}: ENGRAM_SQT {
+        /omit-if-no-ref/ EN_SQT: ENGRAM_SQT {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp SQT>, <&kp LPAR>;
