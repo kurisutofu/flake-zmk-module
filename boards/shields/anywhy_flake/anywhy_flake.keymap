@@ -66,7 +66,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <250>;
             bindings = <&kp LBKT>, <&kp LC(Z)>;
-            label = "JP/UNDO";
+            label = "LBKT/UNDO";
         };
 
         tds: tap_dance_s {
@@ -87,7 +87,7 @@
                 &kp TAB     &kp B   &kp Y   &kp O   &kp U   &EN_SQT                         &EN_DQT     &kp L   &kp D   &kp W   &kp V   &kp Z
                 &kp LGUI    &kp C   &kp I   &kp E   &kp A   &EN_COMMA                       &EN_DOT     &kp H   &kp T   &kp S   &kp N   &kp Q
                 &kp LALT    &kp G   &kp X   &kp J   &kp K   &EN_MINUS                       &EN_QMARK   &kp R   &kp M   &kp F   &kp P   &tdnum
-                            &tdv  &tdz  &kp LCTRL  &mt LSHIFT SPACE  &tdspec1         &kp RET  &kp BSPC  &EN_AT  &kp RBKT  &EN_SLASH
+                            &tdv  &kp LBKT  &kp LCTRL  &mt LSHIFT SPACE  &tdspec1         &kp RET  &kp BSPC  &EN_AT  &kp RBKT  &EN_SLASH
             >;
         };
 

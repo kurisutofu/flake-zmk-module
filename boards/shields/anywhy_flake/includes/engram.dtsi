@@ -83,7 +83,7 @@
                 label = "0 / *";
         };
 
-        /omit-if-no-ref/ EN_SQT: ENGRAM_SQT {
+        /omit-if-no-ref/ {EN_SQT}: ENGRAM_SQT {
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp SQT>, <&kp LPAR>;
@@ -141,6 +141,14 @@
                 compatible = "zmk,behavior-mod-morph";
                 #binding-cells = <0>;
                 bindings = <&kp AT>, <&kp PLUS>;
+                mods = <(MOD_LSFT|MOD_RSFT)>;
+                label = "@ / `";
+        };
+
+        /omit-if-no-ref/ EN_AT: ENGRAM_LBKT {
+                compatible = "zmk,behavior-mod-morph";
+                #binding-cells = <0>;
+                bindings = <&kp LBKT>, <&kp PLUS>;
                 mods = <(MOD_LSFT|MOD_RSFT)>;
                 label = "@ / `";
         };
